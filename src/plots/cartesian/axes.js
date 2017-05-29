@@ -114,9 +114,8 @@ axes.coercePosition = function(containerOut, gd, coerce, axRef, attr, dflt) {
 
         if(ax.type === 'category') {
             // if position is given as a category name, convert it to a number
-            if(typeof pos === 'string' && (ax._categories || []).length) {
-                newPos = ax._categories.indexOf(pos);
-                containerOut[attr] = (newPos === -1) ? dflt : newPos;
+            if(typeof pos === 'string' && pos !== '') {
+                containerOut[attr] = pos;
                 return;
             }
         }

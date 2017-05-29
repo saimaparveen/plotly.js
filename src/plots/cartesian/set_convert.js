@@ -238,7 +238,7 @@ module.exports = function setConvert(ax, fullLayout) {
 
         ax.d2p = function(v) { return ax.l2p(getCategoryIndex(v)); };
         ax.p2d = function(px) { return getCategoryName(p2l(px)); };
-        ax.r2p = ax.l2p;
+        ax.r2p = ax.d2p;
         ax.p2r = p2l;
     }
 
