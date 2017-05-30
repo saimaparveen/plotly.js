@@ -100,8 +100,7 @@ axes.coerceRef = function(containerIn, containerOut, gd, attr, dflt, extraOption
  * - for other types: coerce them to numbers
  */
 axes.coercePosition = function(containerOut, gd, coerce, axRef, attr, dflt) {
-    var pos,
-        newPos;
+    var pos;
 
     if(axRef === 'paper' || axRef === 'pixel') {
         pos = coerce(attr, dflt);
